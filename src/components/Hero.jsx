@@ -98,15 +98,18 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── RIGHT COLUMN — image placeholder ── */}
+      {/* ── RIGHT COLUMN — product image ── */}
       <motion.div
         className="hero__right"
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        {/* Intentionally blank — image will be added later */}
-        <div className="hero__img-placeholder" aria-label="Espaço reservado para foto do produto" />
+        <img
+          src="/hero_cake.jpg"
+          alt="Bolo artesanal de chocolate da Confeitaria Monica"
+          className="hero__img"
+        />
       </motion.div>
     </section>
   );
