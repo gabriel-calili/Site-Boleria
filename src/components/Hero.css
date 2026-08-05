@@ -1,0 +1,254 @@
+/* ── HERO — two-column layout matching the Sweet Crumbs reference ── */
+.hero {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  min-height: clamp(450px, 68vh, 580px);
+  margin-top: 72px;           /* offset fixed navbar */
+  background: var(--creme);
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────
+   LEFT COLUMN
+───────────────────────────────────────── */
+.hero__left {
+  display: flex;
+  align-items: center;
+  padding: 40px 48px 40px 56px;
+  background: var(--creme);
+  position: relative;
+}
+
+/* Paper texture hint */
+.hero__left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(217, 122, 131, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 80%, rgba(238, 220, 203, 0.4) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero__left-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+}
+
+/* ── Small label ── */
+.hero__label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rosa-antigo);
+  margin-bottom: 14px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero__label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--rosa-antigo);
+  display: inline-block;
+}
+
+/* ── Main Headline ── */
+.hero__headline {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  line-height: 1.08;
+}
+
+.hero__headline-line {
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  color: var(--marrom-escuro);
+  line-height: 1.1;
+  display: block;
+}
+
+/* "Doce" — the script word, matching "Sweet" in reference */
+.hero__headline-script {
+  font-family: var(--font-script);
+  font-size: clamp(2.8rem, 4.8vw, 4rem);
+  color: var(--rosa-antigo);
+  line-height: 1.05;
+  display: block;
+  /* Slight italic feel matching the cursive reference */
+}
+
+/* "História." stays on its own line like "Story." in reference */
+.hero__headline-line--inline {
+  /* inherits all .hero__headline-line styles */
+}
+
+/* ── Body Text ── */
+.hero__body {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--marrom-cafe);
+  line-height: 1.65;
+  opacity: 0.78;
+  max-width: 400px;
+  margin-bottom: 22px;
+}
+
+/* ── CTA Buttons ── */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.hero__btn--dark {
+  background: var(--marrom-escuro);
+  color: var(--branco);
+  border-color: var(--marrom-escuro);
+}
+
+.hero__btn--dark:hover {
+  background: transparent;
+  color: var(--marrom-escuro);
+}
+
+.hero__btn--outline {
+  background: transparent;
+  color: var(--marrom-cafe);
+  border-color: rgba(89, 48, 31, 0.3);
+}
+
+.hero__btn--outline:hover {
+  border-color: var(--marrom-cafe);
+  color: var(--marrom-escuro);
+}
+
+/* ── Badges ── */
+.hero__badges {
+  display: flex;
+  gap: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(238, 220, 203, 0.9);
+  flex-wrap: wrap;
+}
+
+.hero__badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.hero__badge-icon {
+  font-size: 1.3rem;
+  color: var(--rosa-antigo);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.hero__badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hero__badge-title {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--marrom-escuro);
+  line-height: 1.3;
+}
+
+.hero__badge-desc {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--marrom-cafe);
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT COLUMN — image placeholder
+───────────────────────────────────────── */
+.hero__right {
+  position: relative;
+  overflow: hidden;
+  background: var(--bege);
+}
+
+.hero__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--bege);
+  /* Subtle inner texture to hint at upcoming image */
+  background-image:
+    radial-gradient(ellipse at 40% 40%, rgba(238, 220, 203, 0.8) 0%, var(--bege) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 340px;
+    min-height: unset;
+  }
+
+  .hero__left {
+    padding: 48px 24px 40px;
+  }
+
+  .hero__left-inner {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__left {
+    padding: 36px 20px 32px;
+  }
+
+  .hero__badges {
+    gap: 20px;
+  }
+
+  .hero__badge {
+    min-width: 100%;
+  }
+}

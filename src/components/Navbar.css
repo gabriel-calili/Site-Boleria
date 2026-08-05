@@ -1,0 +1,176 @@
+/* ── NAVBAR — matches reference: white bg, centered links, dark CTA ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(238, 220, 203, 0.6);
+  box-shadow: 0 2px 16px rgba(89, 48, 31, 0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  gap: 0;
+}
+
+/* ── Logo ── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.navbar__logo-script {
+  font-family: var(--font-script);
+  font-size: 0.9rem;
+  color: var(--rosa-antigo);
+  letter-spacing: 0.02em;
+}
+
+.navbar__logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--marrom-escuro);
+  letter-spacing: 0.04em;
+}
+
+/* ── Nav Links (centered) ── */
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0 auto;         /* centers between logo and CTA */
+  padding: 0;
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--marrom-cafe);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--rosa-antigo);
+  border-radius: 2px;
+  transition: width 0.28s ease;
+}
+
+.navbar__link:hover {
+  color: var(--rosa-antigo);
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+/* ── CTA Button ── */
+.navbar__cta {
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 11px 22px;
+  background: var(--marrom-escuro);
+  color: var(--branco);
+  border-radius: 6px;
+  border: 2px solid var(--marrom-escuro);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.navbar__cta:hover {
+  background: transparent;
+  color: var(--marrom-escuro);
+}
+
+/* ── Hamburger ── */
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--marrom-cafe);
+  margin-left: auto;
+  padding: 4px;
+}
+
+/* ── Mobile Menu ── */
+.navbar__mobile {
+  background: var(--branco);
+  border-top: 1px solid var(--rosa-pastel);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(89, 48, 31, 0.1);
+}
+
+.navbar__mobile-link {
+  padding: 14px 24px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--marrom-cafe);
+  border-bottom: 1px solid var(--rosa-pastel);
+  transition: background 0.2s;
+}
+
+.navbar__mobile-link:hover {
+  background: var(--creme);
+}
+
+.navbar__mobile-cta {
+  margin: 16px 24px 20px;
+  padding: 12px 24px;
+  background: var(--marrom-escuro);
+  color: var(--branco);
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+  .navbar__hamburger {
+    display: block;
+  }
+}
