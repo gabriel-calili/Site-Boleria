@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { FiMessageCircle, FiHeart, FiPackage, FiCheckCircle } from 'react-icons/fi';
 import './OrderSection.css';
 
-const WHATSAPP_NUMBER = '5500000000000'; // Placeholder — será atualizado
+const WHATSAPP_NUMBER = '553196275970';
 
 export default function OrderSection() {
   const ref = useRef(null);

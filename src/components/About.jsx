@@ -55,7 +55,12 @@ export default function About() {
             <a href="#cardapio" className="about__btn about__btn--outline">
               Ver Cardápio
             </a>
-            <a href="#contato" className="about__btn about__btn--filled">
+            <a
+              href="https://wa.me/553196275970"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about__btn about__btn--filled"
+            >
               <FiHeart /> Fale Conosco
             </a>
           </div>

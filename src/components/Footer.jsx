@@ -24,10 +24,22 @@ export default function Footer() {
             "Esse bolo parece feito pela minha avó."
           </p>
           <div className="footer__social">
-            <a href="#" className="footer__social-btn" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/monicabolos1001/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-btn"
+              aria-label="Instagram"
+            >
               <FiInstagram />
             </a>
-            <a href="#" className="footer__social-btn footer__social-btn--wa" aria-label="WhatsApp">
+            <a
+              href="https://wa.me/553196275970"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-btn footer__social-btn--wa"
+              aria-label="WhatsApp"
+            >
               <FiMessageCircle />
             </a>
           </div>
@@ -39,9 +51,7 @@ export default function Footer() {
           <ul className="footer__nav-list">
             <li><a href="#hero">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#bolos-simples">Bolos Simples</a></li>
-            <li><a href="#broas">Broas</a></li>
-            <li><a href="#vulcao">Vulcão</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
             <li><a href="#encomendas">Encomendas</a></li>
           </ul>
         </div>
@@ -52,15 +62,19 @@ export default function Footer() {
           <ul className="footer__contact-list">
             <li>
               <FiPhone />
-              <span>A definir em breve</span>
+              <a href="tel:+553196275970">(31) 9627-5970</a>
             </li>
             <li>
               <FiMessageCircle />
-              <span>WhatsApp em breve</span>
+              <a href="https://wa.me/553196275970" target="_blank" rel="noopener noreferrer">
+                (31) 9627-5970 (WhatsApp)
+              </a>
             </li>
             <li>
-              <FiMapPin />
-              <span>Localização a definir</span>
+              <FiInstagram />
+              <a href="https://www.instagram.com/monicabolos1001/" target="_blank" rel="noopener noreferrer">
+                @monicabolos1001
+              </a>
             </li>
           </ul>
         </div>
