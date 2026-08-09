@@ -16,8 +16,8 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer__brand">
           <div className="footer__logo">
-            <span className="footer__logo-script">Confeitaria</span>
-            <span className="footer__logo-name">Monica</span>
+            <span className="footer__logo-script">Monica</span>
+            <span className="footer__logo-name">Bolos</span>
             <span className="footer__logo-sub">Bolos Caseiros</span>
           </div>
           <p className="footer__slogan">
@@ -83,7 +83,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="footer__bottom">
         <p className="footer__copy">
-          © {year} Confeitaria Monica — Bolos Caseiros. Todos os direitos reservados.
+          © {year} Monica Bolos — Bolos Caseiros. Todos os direitos reservados.
         </p>
         <p className="footer__credit">
           Feito com <FiHeart className="footer__heart" /> e muito açúcar

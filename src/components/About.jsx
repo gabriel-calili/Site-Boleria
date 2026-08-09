@@ -45,7 +45,7 @@ export default function About() {
           </div>
 
           <p className="about__body">
-            Na Confeitaria Monica, cada bolo é muito mais do que um alimento —
+            Na Monica Bolos, cada bolo é muito mais do que um alimento —
             é uma memória afetiva, um abraço em forma de sabor. Nossas receitas
             caseiras são preparadas com ingredientes cuidadosamente selecionados,
             seguindo tradições que atravessam gerações.

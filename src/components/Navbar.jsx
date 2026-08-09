@@ -25,8 +25,8 @@ export default function Navbar() {
         <a href="#hero" className="navbar__logo">
           <span className="navbar__logo-icon">🎂</span>
           <div className="navbar__logo-text">
-            <span className="navbar__logo-script">Confeitaria</span>
-            <span className="navbar__logo-name">Monica</span>
+            <span className="navbar__logo-script">Monica</span>
+            <span className="navbar__logo-name">Bolos</span>
           </div>
         </a>
 

@@ -25,7 +25,7 @@ export default function OrderSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msg = `Olá, Confeitaria Monica! 🎂\n\nGostaria de fazer uma encomenda:\n\n👤 *Nome:* ${form.name}\n🎂 *Produto:* ${form.product}\n📅 *Data desejada:* ${form.date}\n🔢 *Quantidade:* ${form.qty}\n📝 *Observações:* ${form.notes || 'Nenhuma'}\n\nAguardo retorno. Obrigado(a)! ❤`;
+    const msg = `Olá, Monica Bolos!\n\nGostaria de fazer uma encomenda:\n\n*Nome:* ${form.name}\n*Produto:* ${form.product}\n*Data desejada:* ${form.date}\n*Quantidade:* ${form.qty}\n*Observações:* ${form.notes || 'Nenhuma'}\n\nAguardo retorno. Obrigado(a)!`;
     const encoded = encodeURIComponent(msg);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank');
     setSubmitted(true);
