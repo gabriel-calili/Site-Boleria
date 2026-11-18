@@ -20,6 +20,8 @@ const categories = [
       { name: 'Churros', image: '/menu/pool-churros.jpg', imagePosition: 'center 42%' },
       { name: 'Sensação', image: '/menu/pool-sensacao.jpg' },
       { name: 'Cenoura com calda de chocolate', image: '/menu/pool-cenoura.jpg' },
+      { name: 'Cenoura com calda de chocolate', image: '/menu/pool-cenoura-redondo.jpg' },
+      { name: 'Abacaxi com doce de leite', image: '/menu/pool-abacaxi-doce-de-leite.jpg' },
     ],
   },
   {
@@ -44,7 +46,6 @@ const categories = [
     description: 'Uma verdadeira explosão de sabor! Nossos bolos Vulcão e com coberturas especiais são assados com recheio cremoso em abundância que escorre espetacularmente ao cortar a primeira fatia.',
     flavors: [
       { name: 'Churros', image: '/menu/vulcao-churros.jpg' },
-      { name: 'Cenoura com calda de chocolate', image: '/menu/vulcao-cenoura.jpg' },
       { name: 'Ninho com calda de brigadeiro de ninho', image: '/menu/vulcao-ninho.jpg' },
       { name: 'Maracujá com mousse de maracujá', image: '/menu/vulcao-maracuja.jpg' },
       { name: 'Limão com mousse de limão', image: '/menu/vulcao-limao.jpg', imagePosition: 'center 70%' },
@@ -52,7 +53,6 @@ const categories = [
       { name: '2 Amores', image: '/menu/vulcao-2-amores.jpg' },
       { name: 'Paçoca', image: '/menu/vulcao-pacoca.jpg' },
       { name: 'Laranja com calda de chocolate saborizada com laranja', image: '/menu/vulcao-laranja-chocolate.jpg' },
-      { name: 'Abacaxi com doce de leite', image: '/menu/vulcao-abacaxi-doce-de-leite.jpg' },
     ],
   },
   {
@@ -125,7 +125,7 @@ function FlavorCarousel({ flavors, categoryTitle, accentColor }) {
       <div className="flavor-carousel__track" ref={scrollRef}>
         {flavors.map((flavor) => (
           <motion.div
-            key={flavor.name}
+            key={flavor.image || flavor.name}
             className="flavor-carousel__card"
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
