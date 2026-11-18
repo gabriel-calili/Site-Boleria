@@ -64,7 +64,7 @@ export const categories = [
     coverAlt: 'Broa caseira de fubá decorada com corações de goiabada',
     description: 'Tradição e aconchego em cada pedaço. Broas caseiras assadas com textura crocante por fora e macia por dentro, perfeitas para o café da tarde em família.',
     flavors: [
-      { name: 'Milho com requeijão', image: '/menu/broa-milho-requeijao.jpg' },
+      { name: 'Milho com requeijão ou coco', image: '/menu/broa-milho-requeijao.jpg' },
       { name: 'Fubá com calda de goiabada', image: '/menu/broa-fuba-goiabada.jpg' },
       { name: 'Arroz', image: '/menu/broa-arroz.jpg' },
       { name: 'Caçarola', image: '/menu/broa-cacarola.jpg' },
