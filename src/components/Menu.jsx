@@ -11,16 +11,19 @@ const categories = [
     subtitle: 'Bolo Piscina',
     scriptLabel: 'Irresistíveis',
     accent: 'var(--marrom-cafe)',
+    coverImage: '/menu/pool-cover.jpg',
+    coverAlt: 'Pool Cake sabor Sensação coberto com morangos e raspas de chocolate',
     description: 'Nossos Pool Cakes possuem uma cavidade central generosa, recheada até a borda com coberturas cremosas e caldas irresistíveis que escorrem a cada fatia.',
     flavors: [
-      'Chocolate',
-      'Churros',
-      'Sensação',
-      'Cenoura',
-      'Pão de mel',
-      'Ninho',
-      'Maracujá',
-      'Limão',
+      { name: 'Chocolate', image: '/menu/pool-chocolate.jpg', imagePosition: 'center 55%' },
+      { name: 'Coração de Chocolate', image: '/menu/pool-coracao-chocolate.jpg' },
+      { name: 'Churros', image: '/menu/pool-churros.jpg', imagePosition: 'center 42%' },
+      { name: 'Sensação', image: '/menu/pool-sensacao.jpg' },
+      { name: 'Cenoura com calda de chocolate', image: '/menu/pool-cenoura.jpg' },
+      { name: 'Pão de mel', image: null },
+      { name: 'Ninho', image: null },
+      { name: 'Maracujá', image: null },
+      { name: 'Limão', image: null },
     ],
   },
   {
@@ -28,9 +31,11 @@ const categories = [
     title: 'FITNESS',
     scriptLabel: 'Saudável e gostoso',
     accent: 'var(--rosa-antigo)',
-    description: 'Receita nutritiva e equilibrada, preparada com aveia, frutas frescas e especiarias para quem busca afeto e sabor sem abrir mão do bem-estar.',
+    coverImage: '/menu/fitness-cover.jpg',
+    coverAlt: 'Bolo Fitness caseiro de aveia, banana, maçã e passas',
+    description: 'Receita nutritiva e equilibrada (0 lactose, 0 açúcar e 0 glúten), preparada com aveia, frutas frescas e especiarias para quem busca afeto e sabor sem abrir mão do bem-estar.',
     flavors: [
-      'Aveia com banana, maçã e passas',
+      { name: 'Aveia com banana, maçã e passas', image: '/menu/fitness-aveia.jpg' },
     ],
   },
   {
@@ -38,16 +43,22 @@ const categories = [
     title: 'VULCÃO',
     scriptLabel: 'O queridinho de todos',
     accent: 'var(--marrom-cafe)',
-    description: 'Uma verdadeira explosão de sabor! Nossos bolos Vulcão são assados com recheio cremoso em abundância que escorre espetacularmente ao cortar a primeira fatia.',
+    coverImage: '/menu/vulcao-cover.jpg',
+    coverAlt: 'Bolo Vulcão de cenoura fatiado com calda cremosa de chocolate escorrendo',
+    description: 'Uma verdadeira explosão de sabor! Nossos bolos Vulcão e com coberturas especiais são assados com recheio cremoso em abundância que escorre espetacularmente ao cortar a primeira fatia.',
     flavors: [
-      'Chocolate',
-      'Churros',
-      'Cenoura',
-      'Ninho',
-      'Maracujá',
-      'Limão',
-      'Bolotone',
-      'Bolo surpresa — recheado de creme de coco',
+      { name: 'Chocolate com calda de chocolate', image: null },
+      { name: 'Churros', image: '/menu/vulcao-churros.jpg' },
+      { name: 'Cenoura com calda de chocolate', image: '/menu/vulcao-cenoura.jpg' },
+      { name: 'Ninho com calda de brigadeiro de ninho', image: '/menu/vulcao-ninho.jpg' },
+      { name: 'Maracujá com mousse de maracujá', image: '/menu/vulcao-maracuja.jpg' },
+      { name: 'Limão com mousse de limão', image: '/menu/vulcao-limao.jpg', imagePosition: 'center 70%' },
+      { name: 'Prestígio', image: '/menu/vulcao-prestigio.jpg' },
+      { name: '2 Amores', image: '/menu/vulcao-2-amores.jpg' },
+      { name: 'Paçoca', image: '/menu/vulcao-pacoca.jpg' },
+      { name: 'Laranja com calda de chocolate saborizada com laranja', image: '/menu/vulcao-laranja-chocolate.jpg' },
+      { name: 'Abacaxi com doce de leite', image: '/menu/vulcao-abacaxi-doce-de-leite.jpg' },
+      { name: 'Bolotone', image: null },
     ],
   },
   {
@@ -55,13 +66,16 @@ const categories = [
     title: 'BROAS',
     scriptLabel: 'Para o café da tarde',
     accent: 'var(--rosa-antigo)',
+    coverImage: '/menu/broas-cover.jpg',
+    coverAlt: 'Broa caseira de fubá decorada com corações de goiabada',
     description: 'Tradição e aconchego em cada pedaço. Broas caseiras assadas com textura crocante por fora e macia por dentro, perfeitas para o café da tarde em família.',
     flavors: [
-      'Milho com coco',
-      'Milho com requeijão',
-      'Fubá com goiabada',
-      'Fubá com erva doce',
-      'Arroz',
+      { name: 'Milho com coco', image: '/menu/broa-milho-coco.jpg' },
+      { name: 'Milho com requeijão', image: '/menu/broa-milho-requeijao.jpg' },
+      { name: 'Fubá com calda de goiabada', image: '/menu/broa-fuba-goiabada.jpg' },
+      { name: 'Fubá com erva doce', image: null },
+      { name: 'Arroz', image: '/menu/broa-arroz.jpg' },
+      { name: 'Caçarola', image: '/menu/broa-cacarola.jpg' },
     ],
   },
   {
@@ -69,12 +83,33 @@ const categories = [
     title: 'SIMPLES',
     scriptLabel: 'Também temos',
     accent: 'var(--rosa-antigo)',
+    coverImage: '/menu/simples-cover.jpg',
+    coverAlt: 'Trio de bolos caseiros simples de cenoura, chocolate e laranja',
+    coverPosition: 'center 55%',
     description: 'Bolos caseiros tradicionais, fofinhos e aromáticos. Preparados de forma artesanal, resgatando a essência e o carinho das receitas de família.',
     flavors: [
-      'Laranja',
-      'Limão',
-      'Chocolate',
-      'Maracujá',
+      { name: 'Cenoura sem calda', image: '/menu/simples-cenoura.jpg' },
+      { name: 'Laranja', image: '/menu/simples-laranja.jpg' },
+      { name: 'Limão', image: '/menu/simples-limao.jpg', imagePosition: 'center 72%' },
+      { name: 'Coco com calda de beijinho', image: '/menu/simples-coco-beijinho.jpg' },
+      { name: 'Chocolate com calda de chocolate', image: '/menu/simples-chocolate-calda.jpg', imagePosition: 'center 55%' },
+      { name: 'Coco', image: null },
+      { name: 'Chocolate', image: null },
+      { name: 'Maracujá', image: null },
+    ],
+  },
+  {
+    id: 'sobremesas',
+    title: 'SOBREMESAS',
+    subtitle: 'Somente por encomenda',
+    scriptLabel: 'Doces na travessa',
+    accent: 'var(--marrom-cafe)',
+    coverImage: '/menu/sobremesas-cover.jpg',
+    coverAlt: 'Sobremesa na travessa de Ninho com morango e chocolate',
+    description: 'Sobremesas cremosas preparadas na travessa com camadas generosas de recheio e frutas frescas. Disponíveis exclusivamente por encomenda.',
+    flavors: [
+      { name: 'Ninho com morango e chocolate', image: '/menu/sobremesa-ninho-morango.jpg' },
+      { name: 'Chocolate com maracujá', image: '/menu/sobremesa-chocolate-maracuja.jpg' },
     ],
   },
 ];
@@ -98,20 +133,30 @@ function FlavorCarousel({ flavors, categoryTitle, accentColor }) {
       </div>
 
       <div className="flavor-carousel__track" ref={scrollRef}>
-        {flavors.map((flavor, idx) => (
+        {flavors.map((flavor) => (
           <motion.div
-            key={idx}
+            key={flavor.name}
             className="flavor-carousel__card"
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             <div className="flavor-carousel__img-wrap">
-              <div
-                className="flavor-carousel__img-placeholder"
-                aria-label={`Espaço reservado para foto do bolo sabor ${flavor}`}
-              />
+              {flavor.image ? (
+                <img
+                  src={flavor.image}
+                  alt={`${categoryTitle} — ${flavor.name}`}
+                  className="flavor-carousel__img"
+                  loading="lazy"
+                  style={flavor.imagePosition ? { objectPosition: flavor.imagePosition } : undefined}
+                />
+              ) : (
+                <div
+                  className="flavor-carousel__img-placeholder"
+                  aria-label={`Espaço reservado para foto do bolo sabor ${flavor.name}`}
+                />
+              )}
             </div>
             <div className="flavor-carousel__card-body">
-              <h5 className="flavor-carousel__card-title">{flavor}</h5>
+              <h5 className="flavor-carousel__card-title">{flavor.name}</h5>
             </div>
           </motion.div>
         ))}
@@ -155,12 +200,22 @@ function CategoryBlock({ cat, index }) {
           <p className="menu__block-desc">{cat.description}</p>
         </div>
 
-        {/* ── Image placeholder ── */}
+        {/* ── Category cover image ── */}
         <div className="menu__block-img-wrap">
-          <div
-            className="menu__block-img-placeholder"
-            aria-label={`Espaço reservado para foto — ${cat.title}`}
-          />
+          {cat.coverImage ? (
+            <img
+              src={cat.coverImage}
+              alt={cat.coverAlt || cat.title}
+              className="menu__block-img"
+              loading="lazy"
+              style={cat.coverPosition ? { objectPosition: cat.coverPosition } : undefined}
+            />
+          ) : (
+            <div
+              className="menu__block-img-placeholder"
+              aria-label={`Espaço reservado para foto — ${cat.title}`}
+            />
+          )}
         </div>
       </motion.div>
 

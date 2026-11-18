@@ -134,11 +134,21 @@
   margin-top: 4px;
 }
 
-/* ── Image placeholder side ── */
+/* ── Image side ── */
 .menu__block-img-wrap {
   position: relative;
   overflow: hidden;
   min-height: 280px;
+  background: var(--bege);
+}
+
+.menu__block-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .menu__block-img-placeholder {
@@ -245,6 +255,18 @@
   position: relative;
   background: var(--bege);
   overflow: hidden;
+}
+
+.flavor-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.flavor-carousel__card:hover .flavor-carousel__img {
+  transform: scale(1.04);
 }
 
 .flavor-carousel__img-placeholder {
