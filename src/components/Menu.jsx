@@ -4,7 +4,7 @@ import { FiHeart } from 'react-icons/fi';
 import './Menu.css';
 
 /* ── Dados do cardápio ── */
-const categories = [
+export const categories = [
   {
     id: 'pool-cakes',
     title: 'POOL CAKES',

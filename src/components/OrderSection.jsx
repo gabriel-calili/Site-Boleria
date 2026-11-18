@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiMessageCircle, FiHeart, FiPackage, FiCheckCircle } from 'react-icons/fi';
+import { categories } from './Menu';
 import './OrderSection.css';
 
 const WHATSAPP_NUMBER = '553196275970';
@@ -96,42 +97,19 @@ export default function OrderSection() {
                   required
                 >
                   <option value="" disabled>Escolha um produto...</option>
-                  <optgroup label="Simples">
-                    <option>Simples — Laranja</option>
-                    <option>Simples — Limão</option>
-                    <option>Simples — Chocolate</option>
-                    <option>Simples — Maracujá</option>
-                  </optgroup>
-                  <optgroup label="Pool Cakes (Bolo Piscina)">
-                    <option>Pool Cake — Chocolate</option>
-                    <option>Pool Cake — Churros</option>
-                    <option>Pool Cake — Sensação</option>
-                    <option>Pool Cake — Cenoura</option>
-                    <option>Pool Cake — Pão de mel</option>
-                    <option>Pool Cake — Ninho</option>
-                    <option>Pool Cake — Maracujá</option>
-                    <option>Pool Cake — Limão</option>
-                  </optgroup>
-                  <optgroup label="Fitness">
-                    <option>Fitness — Aveia com banana, maçã e passas</option>
-                  </optgroup>
-                  <optgroup label="Vulcão">
-                    <option>Vulcão — Chocolate</option>
-                    <option>Vulcão — Churros</option>
-                    <option>Vulcão — Cenoura</option>
-                    <option>Vulcão — Ninho</option>
-                    <option>Vulcão — Maracujá</option>
-                    <option>Vulcão — Limão</option>
-                    <option>Vulcão — Bolotone</option>
-                    <option>Vulcão — Bolo Surpresa (recheado de creme de coco)</option>
-                  </optgroup>
-                  <optgroup label="Broas">
-                    <option>Broa — Milho com coco</option>
-                    <option>Broa — Milho com requeijão</option>
-                    <option>Broa — Fubá com goiabada</option>
-                    <option>Broa — Fubá com erva doce</option>
-                    <option>Broa — Arroz</option>
-                  </optgroup>
+                  {categories.map((cat) => {
+                    const label = cat.subtitle ? `${cat.title} (${cat.subtitle})` : cat.title;
+                    const uniqueNames = [...new Set(cat.flavors.map((f) => f.name))];
+                    return (
+                      <optgroup key={cat.id} label={label}>
+                        {uniqueNames.map((name) => (
+                          <option key={`${cat.id}-${name}`} value={`${cat.title} — ${name}`}>
+                            {cat.title} — {name}
+                          </option>
+                        ))}
+                      </optgroup>
+                    );
+                  })}
                   <option value="Outro — descrevo nas observações">Outro (descrever nas observações)</option>
                 </select>
               </div>
