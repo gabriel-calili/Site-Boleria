@@ -20,10 +20,6 @@ const categories = [
       { name: 'Churros', image: '/menu/pool-churros.jpg', imagePosition: 'center 42%' },
       { name: 'Sensação', image: '/menu/pool-sensacao.jpg' },
       { name: 'Cenoura com calda de chocolate', image: '/menu/pool-cenoura.jpg' },
-      { name: 'Pão de mel', image: null },
-      { name: 'Ninho', image: null },
-      { name: 'Maracujá', image: null },
-      { name: 'Limão', image: null },
     ],
   },
   {
@@ -47,7 +43,6 @@ const categories = [
     coverAlt: 'Bolo Vulcão de cenoura fatiado com calda cremosa de chocolate escorrendo',
     description: 'Uma verdadeira explosão de sabor! Nossos bolos Vulcão e com coberturas especiais são assados com recheio cremoso em abundância que escorre espetacularmente ao cortar a primeira fatia.',
     flavors: [
-      { name: 'Chocolate com calda de chocolate', image: null },
       { name: 'Churros', image: '/menu/vulcao-churros.jpg' },
       { name: 'Cenoura com calda de chocolate', image: '/menu/vulcao-cenoura.jpg' },
       { name: 'Ninho com calda de brigadeiro de ninho', image: '/menu/vulcao-ninho.jpg' },
@@ -58,7 +53,6 @@ const categories = [
       { name: 'Paçoca', image: '/menu/vulcao-pacoca.jpg' },
       { name: 'Laranja com calda de chocolate saborizada com laranja', image: '/menu/vulcao-laranja-chocolate.jpg' },
       { name: 'Abacaxi com doce de leite', image: '/menu/vulcao-abacaxi-doce-de-leite.jpg' },
-      { name: 'Bolotone', image: null },
     ],
   },
   {
@@ -73,7 +67,6 @@ const categories = [
       { name: 'Milho com coco', image: '/menu/broa-milho-coco.jpg' },
       { name: 'Milho com requeijão', image: '/menu/broa-milho-requeijao.jpg' },
       { name: 'Fubá com calda de goiabada', image: '/menu/broa-fuba-goiabada.jpg' },
-      { name: 'Fubá com erva doce', image: null },
       { name: 'Arroz', image: '/menu/broa-arroz.jpg' },
       { name: 'Caçarola', image: '/menu/broa-cacarola.jpg' },
     ],
@@ -93,9 +86,6 @@ const categories = [
       { name: 'Limão', image: '/menu/simples-limao.jpg', imagePosition: 'center 72%' },
       { name: 'Coco com calda de beijinho', image: '/menu/simples-coco-beijinho.jpg' },
       { name: 'Chocolate com calda de chocolate', image: '/menu/simples-chocolate-calda.jpg', imagePosition: 'center 55%' },
-      { name: 'Coco', image: null },
-      { name: 'Chocolate', image: null },
-      { name: 'Maracujá', image: null },
     ],
   },
   {
