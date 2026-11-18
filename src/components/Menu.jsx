@@ -88,7 +88,7 @@ export const categories = [
       { name: 'Laranja com calda de chocolate', image: '/menu/simples-laranja-chocolate.jpg' },
       { name: 'Chocolate', image: '/menu/simples-chocolate.jpg' },
       { name: 'Maracujá', image: '/menu/simples-maracuja.jpg' },
-      { name: 'Côco', image: '/menu/simples-coco.jpg' },
+      { name: 'Coco', image: '/menu/simples-coco.jpg' },
     ],
   },
   {
