@@ -52,7 +52,7 @@ const categories = [
       { name: 'Prestígio', image: '/menu/vulcao-prestigio.jpg' },
       { name: '2 Amores', image: '/menu/vulcao-2-amores.jpg' },
       { name: 'Paçoca', image: '/menu/vulcao-pacoca.jpg' },
-      { name: 'Laranja com calda de chocolate saborizada com laranja', image: '/menu/vulcao-laranja-chocolate.jpg' },
+      { name: 'Cenoura com calda de chocolate', image: '/menu/vulcao-cenoura-chocolate.jpg' },
     ],
   },
   {
