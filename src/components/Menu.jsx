@@ -86,6 +86,7 @@ const categories = [
       { name: 'Limão', image: '/menu/simples-limao.jpg', imagePosition: 'center 72%' },
       { name: 'Coco com calda de beijinho', image: '/menu/simples-coco-beijinho.jpg' },
       { name: 'Chocolate com calda de chocolate', image: '/menu/simples-chocolate-calda.jpg', imagePosition: 'center 55%' },
+      { name: 'Laranja com calda de chocolate', image: '/menu/simples-laranja-chocolate.jpg' },
     ],
   },
   {
